@@ -57,6 +57,7 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
+    "coverage": "jest --coverage",
     "cz": "git-cz",
     "format": "prettier --use-tabs --trailing-comma es5 --use-tabs --single-quote --write '**/*.js' && eslint --cache --fix ./",
     "lint": "eslint --cache src",
@@ -77,6 +78,7 @@
     "jest": "^21.1.0",
     "lint-staged": "^4.2.1",
     "prettier": "^1.8.0",
+    "prettier-eslint": "8.2.2",
     "rimraf": "^2.6.2",
     "semantic-release": "^7.0.2",
     "xo": "0.18.2"
