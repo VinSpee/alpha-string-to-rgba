@@ -1,10 +1,11 @@
 {
-  "name": "module-boilerplate",
-  "version": "0.0.0-development",
+  "name": "alpha-string-to-rgba",
+  "version": "1.0.0",
   "main": "src/index.js",
+  "module": "src/index.js",
   "browser": "dist/index.js",
-  "repository": "git@github.com:Landish/module-boilerplate.git",
-  "author": "Lado Lomidze <lado.lomidze@gmail.com> (https://ladolomidze.com/)",
+  "repository": "git@github.com:VinSpee/alpha-string-to-rgba.git",
+  "author": "Vince Speelman <v@vinspee.me> (http://vinspee.me/)",
   "license": "MIT",
   "config": {
     "commitizen": {
