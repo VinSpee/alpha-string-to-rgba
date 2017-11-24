@@ -1,0 +1,14 @@
+[ignore]
+<PROJECT_ROOT>/coverage/.*
+<PROJECT_ROOT>/dist/.*
+.*/node_modules/config-chain/test/broken.json
+.*/node_modules/npmconf/test/.*
+
+[include]
+<PROJECT_ROOT>/src/.*.js
+
+[libs]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+unsafe.enable_getters_and_setters=true
