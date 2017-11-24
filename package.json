@@ -52,9 +52,6 @@
       ]
     }
   },
-  "eslintIgnore": [
-    "build/*"
-  ],
   "scripts": {
     "precommit": "lint-staged",
     "coverage": "jest --coverage",
