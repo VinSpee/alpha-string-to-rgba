@@ -1,49 +1,55 @@
-# Module Boilerplate
+# Alpha String to RGBa
 
-NPM Module Boilerplate
+Converts alpha strings (`red.5`) to rgba (`rgba(255, 0, 0, 0.5)`).
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Travis](https://img.shields.io/travis/Landish/module-boilerplate.svg)](https://travis-ci.org/Landish/module-boilerplate)
+[![Travis](https://img.shields.io/travis/vinspee/alpha-string-to-rgba.svg)](https://travis-ci.org/vinspee/alpha-string-to-rgba)
 [![Tested with Jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![license](https://img.shields.io/github/license/Landish/module-boilerplate.svg)](https://github.com/Landish/module-boilerplate/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/vinspee/alpha-string-to-rgba.svg)](https://github.com/vinspee/alpha-string-to-rgba/blob/master/LICENSE)
 
 ## Features
-- Build with [Babel](https://babeljs.io/)
-- Test with [Jest](https://facebook.github.io/jest/)
-- Git commit styles with [commitizen](https://github.com/commitizen/cz-cli) and [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog)
-- Automated package publishing with [semantic-release](https://github.com/semantic-release/semantic-release)
-- CI with [Travis](https://travis-ci.org/)
+
+Takes a colors object and a value, returning a new string which is the rgba,
+hex, or css color name representation calculated from the given value.
+
+```js
+import aToRGBa from 'alpha-string-to-rgba';
+
+const colorMap = {
+	aqua:    '#7fdbff',
+	blue:    '#0074d9',
+	lime:    '#01ff70',
+	navy:    '#001f3f',
+	teal:    '#39cccc',
+	olive:   '#3d9970',
+	green:   '#2ecc40',
+	red:     '#ff4136',
+	maroon:  '#85144b',
+	orange:  '#ff851b',
+	purple:  '#b10dc9',
+	yellow:  '#ffdc00',
+	fuchsia: '#f012be',
+	gray:    '#aaaaaa',
+	white:   '#ffffff',
+	black:   '#111111',
+	silver:  '#dddddd'
+};
+
+const getColor = aToRGBa(colorMap);
+
+getColor('red'); // '#ff4136';
+getColor('red.5') // 'rgba(255, 65, 54, 0.5)'
+```
 
 ## Getting Started
 
 ```shell
-$ git clone git@github.com:Landish/module-boilerplate.git
-$ cd module-boilerplate
-$ rm -rf .git
-$ git init
-$ git remote add origin https://github.com/username/repository.git
+❯ yarn add alpha-string-to-rgba
 ```
-
-## Yarn Scripts
-
-- `yarn build` compiles ES6 to ES5 with [Babel](https://babeljs.io/)
-- `yarn cz` propmts [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) with [commitizen](https://github.com/commitizen/cz-cli)
-- `yarn format` formats code with [Prettier](https://github.com/prettier/prettier) using settings from `.prettierrc` file
-- `yarn test` runs tests with [Jest](https://facebook.github.io/jest/)
-- `yarn test:watch` runs tests with `--watch` flag
-- `yarn release` releases package with [semantic-release](https://github.com/semantic-release/semantic-release)
-
-## Alternatives
-
-- [npm-boilerplate](https://www.npmjs.com/package/npm-boilerplate)
-- [npm-package-boilerplate](https://www.npmjs.com/package/npm-package-boilerplate)
-- [npm-module-boilerplate](https://www.npmjs.com/package/npm-module-boilerplate)
-- [npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)
-- [npm-module-boilerplate-es6](https://www.npmjs.com/package/npm-module-boilerplate-es6)
 
 ## Licence
 
