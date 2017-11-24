@@ -1,11 +1,11 @@
 [ignore]
-<PROJECT_ROOT>/coverage/.*
-<PROJECT_ROOT>/dist/.*
+coverage/.*
+dist/.*
 .*/node_modules/config-chain/test/broken.json
 .*/node_modules/npmconf/test/.*
 
 [include]
-<PROJECT_ROOT>/src/.*.js
+src/**/*.js
 
 [libs]
 
