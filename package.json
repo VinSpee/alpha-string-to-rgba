@@ -67,7 +67,7 @@
     "test:watch": "yarn lint && jest --watch",
     "prerelease": "yarn build && yarn changelog",
     "release": "semantic-release pre && npm publish && semantic-release post",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'update changelog'"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
