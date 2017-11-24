@@ -1,6 +1,7 @@
 <a name="1.0.0"></a>
 # 1.0.0 (2017-11-24)
 
+* feat(compile): add compiled output ([e4f203b](https://github.com/VinSpee/alpha-string-to-rgba/commit/e4f203b))
 * docs($readme): adds relevant info to readme ([cc06425](https://github.com/VinSpee/alpha-string-to-rgba/commit/cc06425))
 * build($build): update ignored lint files ([57ca028](https://github.com/VinSpee/alpha-string-to-rgba/commit/57ca028))
 * build($npm): update package config ([9eaedb9](https://github.com/VinSpee/alpha-string-to-rgba/commit/9eaedb9))
