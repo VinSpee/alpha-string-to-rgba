@@ -1,6 +1,6 @@
 {
   "name": "alpha-string-to-rgba",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "src/index.js",
   "module": "src/index.js",
   "browser": "dist/index.js",
@@ -67,7 +67,8 @@
     "test:watch": "yarn lint && jest --watch",
     "prerelease": "yarn build && yarn changelog",
     "release": "semantic-release pre && npm publish && semantic-release post",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'update changelog'"
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'update changelog'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -84,7 +85,7 @@
     "prettier-eslint": "8.2.2",
     "rimraf": "2.6.2",
     "run-p": "0.0.0",
-    "semantic-release": "^7.0.2",
+    "semantic-release": "^8.2.0",
     "xo": "0.18.2"
   },
   "dependencies": {
