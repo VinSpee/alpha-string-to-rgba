@@ -1,6 +1,6 @@
 // @flow
-import parse from 'pure-color/parse';
-import CSS_NAMES from 'css-color-names';
+const parse = require('pure-color/parse');
+const CSS_NAMES = require('css-color-names');
 
 /*::
 type ColorNameShape = string;
@@ -50,4 +50,4 @@ const getColor = (colors /*: ColorsShape */) => (
 	);
 };
 
-export default getColor;
+module.exports = getColor;
