@@ -1,6 +1,6 @@
 {
   "name": "alpha-string-to-rgba",
-  "version": "0.0.0-development",
+  "version": "1.2.0",
   "main": "src/index.js",
   "module": "src/index.js",
   "browser": "dist/index.js",
