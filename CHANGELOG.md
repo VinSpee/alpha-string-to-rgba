@@ -1,3 +1,25 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2018-06-02)
+
+
+
+
+<a name="1.4.0"></a>
+# 1.4.0 (2018-06-02)
+
+* fix(formatting): fix weird color names ([ba2e9d7](https://github.com/VinSpee/alpha-string-to-rgba/commit/ba2e9d7))
+* ci(build): add chore prefix ([d73ebd0](https://github.com/VinSpee/alpha-string-to-rgba/commit/d73ebd0))
+
+
+
+<a name="1.3.0"></a>
+# 1.3.0 (2018-01-06)
+
+* update changelog ([664a3c8](https://github.com/VinSpee/alpha-string-to-rgba/commit/664a3c8))
+* v1.3.0 ([84ef0a2](https://github.com/VinSpee/alpha-string-to-rgba/commit/84ef0a2))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2018-01-06)
 
