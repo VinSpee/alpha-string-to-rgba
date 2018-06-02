@@ -26,12 +26,16 @@ const getColor = (colors /*: ColorsShape */) => (
 	const alpha = /(.+)(\.\d+)/.exec(value);
 	if (alpha) {
 		if (colors[alpha[1]]) {
-			if (alpha[1].charAt(0) !== '#' && colors[alpha[1]]) {
+			if (colors[alpha[1]].charAt(0) !== '#') {
 				const colorHash = parse(CSS_NAMES[colors[alpha[1]]]);
 				return `rgba(${colorHash[0]}, ${colorHash[1]}, ${
 					colorHash[2]
 				}, ${parseFloat(alpha[2])})`;
 			}
+			const colorHash = parse(colors[alpha[1]]);
+			return `rgba(${colorHash[0]}, ${colorHash[1]}, ${
+				colorHash[2]
+			}, ${parseFloat(alpha[2])})`;
 		}
 	}
 
