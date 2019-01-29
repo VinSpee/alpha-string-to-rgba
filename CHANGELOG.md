@@ -1,6 +1,9 @@
 <a name="1.3.0"></a>
-# 1.3.0 (2018-06-02)
+# 1.3.0 (2019-01-29)
 
+* feat(types): convert codebase to typescript and compile types ([33bd9cd](https://github.com/VinSpee/alpha-string-to-rgba/commit/33bd9cd))
+* ci(travis): update travis config ([e8391f5](https://github.com/VinSpee/alpha-string-to-rgba/commit/e8391f5))
+* update changelog ([cc75e02](https://github.com/VinSpee/alpha-string-to-rgba/commit/cc75e02))
 
 
 
