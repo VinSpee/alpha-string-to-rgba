@@ -1,9 +1,14 @@
 {
   "name": "alpha-string-to-rgba",
   "version": "1.3.0",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "browser": "dist/index.js",
+  "main": "dist/alpha-string-to-rgba.cjs.js",
+  "types": "dist/index.d.ts",
+  "umd:main": "dist/alpha-string-to-rgba.umd.js",
+  "module": "dist/alpha-string-to-rgba.es.js",
+  "browser": "dist/alpha-string-to-rgba.umd.js",
+  "esnext": "dist/alpha-string-to-rgba.es.js",
+  "source": "src/alpha-string-to-rgba.js",
+  "files": ["dist", "src"],
   "repository": "git@github.com:VinSpee/alpha-string-to-rgba.git",
   "author": "Vince Speelman <v@vinspee.me> (http://vinspee.me/)",
   "license": "MIT",
@@ -13,15 +18,10 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
-      "yarn format",
-      "git add"
-    ]
+    "src/**/*.js": ["yarn format", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo/esnext"
-    ],
+    "extends": ["xo/esnext"],
     "globals": {
       "window": true,
       "test": true,
@@ -32,10 +32,7 @@
       "function-paren-newline": 0,
       "spaced-comment": 0,
       "arrow-parens": 0,
-      "space-before-function-paren": [
-        "error",
-        "never"
-      ],
+      "space-before-function-paren": ["error", "never"],
       "no-unused-vars": [
         "error",
         {
@@ -43,14 +40,8 @@
           "argsIgnorePattern": "^_"
         }
       ],
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ]
+      "object-curly-spacing": ["error", "always"],
+      "comma-dangle": ["error", "always-multiline"]
     }
   },
   "scripts": {
@@ -58,25 +49,32 @@
     "coverage": "jest --coverage",
     "clean": "rimraf dist",
     "cz": "git-cz",
-    "format": "prettier --use-tabs --trailing-comma es5 --use-tabs --single-quote --write '**/*.js' && eslint --cache --fix ./",
+    "format":
+      "prettier --use-tabs --trailing-comma es5 --use-tabs --single-quote --write '**/*.js' && eslint --cache --fix ./",
     "lint": "eslint --cache src",
-    "postlint": "yarn run flow check",
     "prebuild": "run-p clean lint test",
-    "build": "babel src -d dist",
+    "build":
+      "bili --plugin typescript2 --format cjs,umd,umd-min,es --moduleName AlphaStringToRGBA --name alpha-string-to-rgba --input src/index.ts --outDir dist --envelopeE_ENV production",
     "test": "jest",
     "test:watch": "yarn lint && jest --watch",
     "prerelease": "yarn build && yarn changelog",
     "release": "semantic-release pre && npm publish && semantic-release post",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'update changelog'",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "changelog":
+      "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'update changelog'",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/core": "7.2.2",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.1.0",
+    "@types/jest": "23.3.13",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23.6.0",
+    "bili": "3.4.2",
     "commitizen": "^2.9.6",
     "conventional-changelog-cli": "1.3.5",
     "cz-conventional-changelog": "^2.0.0",
-    "flow-bin": "0.59.0",
     "husky": "^0.14.3",
     "jest": "^21.1.0",
     "lint-staged": "^4.2.1",
@@ -84,12 +82,12 @@
     "prettier": "^1.8.0",
     "prettier-eslint": "8.2.2",
     "rimraf": "2.6.2",
+    "rollup-plugin-typescript2": "0.19.2",
     "run-p": "0.0.0",
     "semantic-release": "^8.2.0",
     "xo": "0.18.2"
   },
   "dependencies": {
-    "babel-eslint": "8.0.2",
     "css-color-names": "0.0.4",
     "pure-color": "1.3.0"
   }
