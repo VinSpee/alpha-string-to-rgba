@@ -9,7 +9,7 @@ Converts alpha strings (`red.5`) to rgba (`rgba(255, 0, 0, 0.5)`).
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![license](https://img.shields.io/github/license/VinSpee/alpha-string-to-rgba.svg)](https://github.com/VinSpee/alpha-string-to-rgba/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/VinSpee/alpha-string-to-rgba.svg)](https://github.com/VinSpee/alpha-string-to-rgba/blob/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/VinSpee/alpha-string-to-rgba.svg)](https://greenkeeper.io/)
 
 ## Features
 
